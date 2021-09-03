@@ -1,0 +1,37 @@
+{
+  "name": "custom-calculator",
+  "version": "1.0.0",
+  "description": "## Task: https://docs.google.com/document/d/1j8DnTnRSNoRBdYtKu3Rgk1STLso4X5Rev2-oEyxMsK8/edit#",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anabuon/custom-calculator.git"
+  },
+  "author": "anabuon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anabuon/custom-calculator/issues"
+  },
+  "homepage": "https://github.com/anabuon/custom-calculator#readme",
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
