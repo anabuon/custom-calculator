@@ -1,0 +1,5 @@
+.vscode
+.prettierignore
+*.log*
+node_modules/
+build/
