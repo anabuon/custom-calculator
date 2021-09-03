@@ -41,10 +41,10 @@
   border: 1px solid #333333;
 }
 
-.calc-btn:hover {
+/* .calc-btn:hover {
   background-color: #ddbc96;
   color: #000;
-}
+} */
 
 .operation {
   background-color: #525252;
@@ -64,7 +64,7 @@
   grid-column: span 6;
 }
 
-.click-effect {
+/* .click-effect {
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -74,4 +74,4 @@
 
 .press-effect {
   animation: press-effect 0.3s ease;
-}
+} */
