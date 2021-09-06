@@ -1,6 +1,6 @@
 # Custom Calculator
 
-## Task: [link](https://docs.google.com/document/d/1j8DnTnRSNoRBdYtKu3Rgk1STLso4X5Rev2-oEyxMsK8/edit#) {:target="_blank" rel="noopener"}
+## Task: [link](https://docs.google.com/document/d/1j8DnTnRSNoRBdYtKu3Rgk1STLso4X5Rev2-oEyxMsK8/edit#)
 
 ## Install
 
