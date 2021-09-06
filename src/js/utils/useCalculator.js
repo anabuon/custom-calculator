@@ -24,11 +24,11 @@ export const useCalculator = (target, calculator) => {
     case 'all-clear':
       calculator.clear()
       break
-    case 'memory-save':
-      calculator.saveToMemory()
-      break
     case 'memory-add':
       calculator.addToMemory()
+      break
+    case 'memory-remove':
+      calculator.removeToMemory()
       break
     case 'memory-show':
       calculator.showMemory()

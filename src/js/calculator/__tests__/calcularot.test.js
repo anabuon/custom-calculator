@@ -8,27 +8,27 @@ describe('Calculator', () => {
     calculator.currentOperand = 10
   })
 
-  it('saveToMemory method should work correctly', () => {
-    calculator.saveToMemory()
+  it('addToMemory method should work correctly', () => {
+    calculator.addToMemory()
     expect(calculator.memory).toBe(10)
   })
 
-  it('addToMemory method should work correctly', () => {
-    calculator.saveToMemory()
-    calculator.currentOperand = 20
+  it('removeToMemory method should work correctly', () => {
     calculator.addToMemory()
-    expect(calculator.memory).toBe(30)
+    calculator.currentOperand = 5
+    calculator.removeToMemory()
+    expect(calculator.memory).toBe(5)
   })
 
   it('showMemory method should work correctly', () => {
-    calculator.saveToMemory()
+    calculator.addToMemory()
     calculator.currentOperand = 0
     calculator.showMemory()
     expect(calculator.currentOperand).toBe(10)
   })
 
   it('clearMemory method should work correctly', () => {
-    calculator.saveToMemory()
+    calculator.addToMemory()
     calculator.currentOperand = 16
     calculator.clearMemory()
     expect(calculator.currentOperand).toBe(0)

@@ -17,12 +17,12 @@ export default class Calculator {
     this.operation = undefined
   }
 
-  // saveToMemory() {
-  //   this.memory = parseFloat(this.currentOperand)
-  // }
-
   addToMemory() {
     this.memory += parseFloat(this.currentOperand)
+  }
+
+  removeToMemory() {
+    this.memory -= parseFloat(this.currentOperand)
   }
 
   showMemory() {
@@ -79,8 +79,7 @@ export default class Calculator {
       this.currentOperand,
     )
 
-    if (!this._checkIsrest(this.operation)) {
-      // if (true) {
+    if (!this._checkIsRest(this.operation)) {
       this.previousOperandTextElement.innerText = `${getDisplayNumber(
         this.previousOperand,
       )} ${this.operation || ''}`
