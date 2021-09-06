@@ -1,5 +1,10 @@
+.DS_Store
+Thumbs.db
+.idea
+*.sublime*
 .vscode
 .prettierignore
 *.log*
 node_modules/
 build/
+source/coverage/

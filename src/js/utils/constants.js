@@ -1,0 +1,15 @@
+export const REST_OPERATIONS = [
+  '±',
+  '%',
+  'x²',
+  'x³',
+  'x<sup>y</sup>',
+  'e<sup>x</sup>',
+  '10<sup>x</sup>',
+  '1/x',
+  '√x',
+  '∛‎x',
+  'π',
+  'ln',
+  'log10',
+]

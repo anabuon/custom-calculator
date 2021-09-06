@@ -5,5 +5,11 @@
   "singleQuote": true,
   "trailingComma": "all",
   "jsxBracketSameLine": false,
-  "semi": false
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.less",
+      "options": { "singleQuote": false }
+    }
+  ]
 }
