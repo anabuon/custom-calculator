@@ -40,6 +40,12 @@ export default class Calculator {
     this.currentOperand = this.currentOperand.toString() + number.toString()
   }
 
+  // appendNumberQQQ(number) {
+  //   if (number === '(' || number === ')') return
+
+  //   this.currentOperand = this.currentOperand.toString() + number.toString()
+  // }
+
   chooseOperation(operation) {
     if (this.currentOperand === '') return
 

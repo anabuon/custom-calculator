@@ -33,8 +33,8 @@ describe('calcRestOperations', () => {
 
   // it('x^y should work correctly', () => {
   //   expect(typeof calcRestOperations('x^y', 0)).toBe('number')
-  //   expect(calcRestOperations('', 0)).toEqual(Infinity)
-  //   expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+  //   expect(calcRestOperations('', 0)).toEqual()
+  //   expect(calcRestOperations('', 1)).toBeCloseTo()
   // })
 
   it('e^x should work correctly', () => {
@@ -60,32 +60,45 @@ describe('calcRestOperations', () => {
 
   it('√x should work correctly', () => {
     expect(typeof calcRestOperations('√x', 0)).toBe('number')
-    expect(calcRestOperations('', 0)).toEqual(Infinity)
-    expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+    expect(calcRestOperations('√x', 0)).toEqual(0)
+    expect(calcRestOperations('√x', 1)).toEqual(1)
+    expect(calcRestOperations('√x', -1)).toEqual(NaN)
+    expect(calcRestOperations('√x', 9)).toEqual(3)
+    expect(calcRestOperations('√x', 0.5)).toBeCloseTo(0.707)
   })
 
   it('∛‎x should work correctly', () => {
     expect(typeof calcRestOperations('∛‎x', 0)).toBe('number')
-    expect(calcRestOperations('', 0)).toEqual(Infinity)
-    expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+    expect(calcRestOperations('∛‎x', 0)).toEqual(0)
+    expect(calcRestOperations('∛‎x', 1)).toEqual(1)
+    expect(calcRestOperations('∛‎x', -1)).toEqual(-1)
+    expect(calcRestOperations('∛‎x', 27)).toEqual(3)
+    expect(calcRestOperations('∛‎x', 0.5)).toBeCloseTo(0.793)
   })
 
   it('π should work correctly', () => {
     expect(typeof calcRestOperations('π', 0)).toBe('number')
-    expect(calcRestOperations('', 0)).toEqual(Infinity)
-    expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+    expect(calcRestOperations('π', 0)).toEqual(0)
+    expect(calcRestOperations('π', 1)).toBeCloseTo(3.14)
+    expect(calcRestOperations('π', -1)).toBeCloseTo(-3.14)
+    expect(calcRestOperations('π', 0.5)).toBeCloseTo(1.57)
   })
 
   it('ln should work correctly', () => {
     expect(typeof calcRestOperations('ln', 0)).toBe('number')
-    expect(calcRestOperations('', 0)).toEqual(Infinity)
-    expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+    expect(calcRestOperations('ln', 0)).toEqual(-Infinity)
+    expect(calcRestOperations('ln', 1)).toEqual(0)
+    expect(calcRestOperations('ln', -1)).toEqual(NaN)
+    expect(calcRestOperations('ln', 10)).toBeCloseTo(2.302)
   })
 
   it('log10 should work correctly', () => {
     expect(typeof calcRestOperations('log10', 0)).toBe('number')
-    expect(calcRestOperations('', 0)).toEqual(Infinity)
-    expect(calcRestOperations('', 1)).toBeCloseTo(0.64)
+    expect(calcRestOperations('log10', 0)).toEqual(-Infinity)
+    expect(calcRestOperations('log10', 1)).toEqual(0)
+    expect(calcRestOperations('log10', 100)).toEqual(2)
+    expect(calcRestOperations('log10', -1)).toEqual(NaN)
+    expect(calcRestOperations('log10', 2)).toBeCloseTo(0.301)
   })
 
   it('Default should return from function', () => {

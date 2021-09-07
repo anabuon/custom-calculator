@@ -1,3 +1,7 @@
+function fixDecimal(number) {
+  return Number(parseFloat(number).toPrecision(8))
+}
+
 export const calcRestOperations = (operation, current) => {
   switch (operation) {
     case '±':
@@ -21,13 +25,13 @@ export const calcRestOperations = (operation, current) => {
     case '√x':
       return Math.sqrt(current)
     case '∛‎x':
-      return Math.cbrt(current)
+      return fixDecimal(Math.cbrt(current))
     case 'π':
-      return Math.PI * current
+      return fixDecimal(Math.PI * current)
     case 'ln':
-      return Math.log(current)
+      return fixDecimal(Math.log(current))
     case 'log10':
-      return Math.log10(current)
+      return fixDecimal(Math.log10(current))
     default:
       return
   }
