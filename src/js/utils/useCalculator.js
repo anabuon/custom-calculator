@@ -1,19 +1,7 @@
 export const useCalculator = (target, calculator) => {
   switch (target.dataset.type) {
     case 'integer':
-      if (
-        calculator.previousOperand === '' &&
-        calculator.currentOperand !== '' &&
-        calculator.readyToReset
-      ) {
-        calculator.currentOperand = ''
-        calculator.readyToReset = false
-      }
-
-      calculator.appendNumber(target.innerText)
-      break
-    case 'operation':
-      calculator.chooseOperation(target.innerText)
+      calculator.insert(target.innerText)
       break
     case 'rest-operation':
       calculator.chooseOperation(target.innerText)
