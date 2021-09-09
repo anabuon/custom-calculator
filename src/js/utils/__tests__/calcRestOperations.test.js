@@ -59,10 +59,11 @@ describe('calcRestOperations', () => {
   })
 
   it('√x should work correctly', () => {
+    expect(typeof calcRestOperations('√x', -1)).toBe('string')
     expect(typeof calcRestOperations('√x', 0)).toBe('number')
     expect(calcRestOperations('√x', 0)).toEqual(0)
     expect(calcRestOperations('√x', 1)).toEqual(1)
-    expect(calcRestOperations('√x', -1)).toEqual(NaN)
+    expect(calcRestOperations('√x', -1)).toEqual('invalid value')
     expect(calcRestOperations('√x', 9)).toEqual(3)
     expect(calcRestOperations('√x', 0.5)).toBeCloseTo(0.707)
   })
