@@ -14,8 +14,6 @@ export const calcRestOperations = (operation, current) => {
       return Math.pow(current, 2)
     case 'x³':
       return Math.pow(current, 3)
-    case 'xy':
-      return Math.pow(x, y)
     case 'ex':
       return Math.exp(current)
     case '10x':
@@ -23,7 +21,7 @@ export const calcRestOperations = (operation, current) => {
     case '1/x':
       return 1 / current
     case '√x':
-      return Math.sqrt(current)
+      return current >= 0 ? fixDecimal(Math.sqrt(current)) : 'invalid value'
     case '∛‎x':
       return fixDecimal(Math.cbrt(current))
     case 'π':
