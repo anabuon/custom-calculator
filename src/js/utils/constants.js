@@ -4,7 +4,6 @@ export const REST_OPERATIONS = [
   '2n',
   'x²',
   'x³',
-  'xy',
   'ex',
   '10x',
   '1/x',
