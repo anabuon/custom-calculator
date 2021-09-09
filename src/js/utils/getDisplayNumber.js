@@ -1,7 +1,5 @@
 export const getDisplayNumber = (number) => {
-  const stringNumber = number
-    .toString()
-    .replace(/%(\d+(?:\.\d+)?)/g, '*($1/100)')
+  const stringNumber = number.toString()
   const integerDigits = parseFloat(stringNumber.split('.')[0])
   const decimalDigits = stringNumber.split('.')[1]
 

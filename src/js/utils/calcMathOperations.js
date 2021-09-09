@@ -4,6 +4,8 @@ function fixDecimal(number) {
 
 export const calcMathOperations = (operation, prev, current) => {
   switch (operation) {
+    case 'xy':
+      return fixDecimal(Math.pow(prev, current))
     case '+':
       return fixDecimal(prev + current)
     case '-':
