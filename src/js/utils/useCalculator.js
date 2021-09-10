@@ -6,6 +6,9 @@ export const useCalculator = (target, calculator) => {
     case 'rest-operation':
       calculator.chooseOperation(target.innerText)
       break
+    case 'change':
+      calculator.changeDisplay(target.dataset.type)
+      break
     case 'equals':
       calculator.calc('math')
       break

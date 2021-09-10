@@ -1,7 +1,8 @@
-import { REST_OPERATIONS } from '../utils/constants.js'
+import { REST_OPERATIONS } from '../utils/constants'
 // import { getDisplayNumber } from '../utils/getDisplayNumber'
 // import { calcMathOperations } from '../utils/calcMathOperations'
 import { calcRestOperations } from '../utils/calcRestOperations'
+import { parseString } from '../utils/parseString'
 
 export default class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -36,7 +37,7 @@ export default class Calculator {
   }
 
   insert(string) {
-    if (this.currentOperand == '0') {
+    if (this.currentOperand === 0) {
       this.currentOperand = ''
       this.currentOperand += string
     } else {
@@ -50,14 +51,14 @@ export default class Calculator {
 
   calc(calcType) {
     const current = this.currentOperand
-
+    console.log(this.currentOperand)
     if (calcType === 'math') {
-      this.currentOperand = eval(current)
+      this.currentOperand = parseString(current)
       this.previousOperandTextElement.innerText = current
     }
 
     if (calcType === 'rest-operation') {
-      this._calcRest(eval(current))
+      this.currentOperand = this._calcRest(current)
       this.previousOperandTextElement.innerText = current
     }
   }
@@ -73,12 +74,19 @@ export default class Calculator {
   }
 
   _calcRest(current) {
-    this.currentOperand = calcRestOperations(this.operation, current)
+    return calcRestOperations(this.operation, current)
   }
 
   _checkIsRest(operation) {
     return REST_OPERATIONS.includes(operation)
     // return Object.keys(REST_OPERATIONS).includes(operation)
+  }
+
+  changeDisplay(type) {
+    console.log(type)
+    // return type === 'rest-operation'
+    //   ? (type = 'rest')
+    //   : (type = 'rest-operation')
   }
 }
 
